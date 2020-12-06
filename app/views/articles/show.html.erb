@@ -1,5 +1,29 @@
-<h1><%= @article.title %></h1>
-<p> <%= @article.content %> </p>
-<%= link_to "edit", edit_article_path(@article) %>
-<%= link_to "delete", article_path(@article), method: :delete %>
-<%= link_to "return", articles_path %>
+<div class="container">
+  <div class="border-bottom d-flex">
+    <h1><%= @article.title %></h1>
+
+    <div class="icon d-flex justify-content-center">
+      <%=link_to edit_article_path(@article) do %>
+        <%= fa_icon "edit" %>
+      <% end  %>
+    </div>
+
+    <div class="icon d-flex justify-content-center">
+      <%=link_to article_path(@article), method: :delete, data: {confirm: "Are you sure?"} do %>
+        <%= fa_icon "trash" %>
+      <% end  %>
+    </div>
+  </div>
+
+  <p> <%= @article.content %> </p>
+
+
+  <%=link_to articles_path do %>
+    <div class="blue-btn">
+      <%= fa_icon "undo" %>
+    </div>
+  <% end %>
+</div>
+
+
+

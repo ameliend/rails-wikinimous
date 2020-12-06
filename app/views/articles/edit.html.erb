@@ -1,5 +1,13 @@
-<%= simple_form_for(@article) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.submit %>
-<% end %>
+
+
+<div class="w-50 mt-3 mx-auto">
+  <h1>Edit your article</h1>
+
+  <%= simple_form_for(@article) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
+

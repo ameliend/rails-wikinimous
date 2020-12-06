@@ -9,7 +9,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<nav class="navbar navbar-light bg-light">
+  <h3> Wikinimous </h3>
+
+  <div class="blue-btn">
+    <%=link_to new_article_path do %>
+      <%= "New Article" %>
+      <%= fa_icon "plus-square" %>
+    <% end  %>
+  </div>
+</nav>
+
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
